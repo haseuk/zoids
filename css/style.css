@@ -1,0 +1,110 @@
+html {
+  font-size: 16px;
+}
+.container .wrap {
+  font-size: 0rem;
+  text-align: center;
+  position: relative;
+}
+.container .wrap header {
+  width: 75rem;
+  text-align: left;
+  position: fixed;
+  left: 50%;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
+  margin-left: -37.5rem;
+  zoom: 1;
+}
+.container .wrap header:after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+.container .wrap header h1 {
+  width: 9rem;
+  height: 4.875rem;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 1.0625rem;
+  display: inline-block;
+}
+.container .wrap header .h-sns {
+  float: right;
+  margin-top: 2.3125rem;
+}
+.container .wrap header .h-sns a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.container .wrap header .h-sns a.cr {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-image: url('../images/ico-1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 1.875rem;
+}
+.container .wrap header .h-sns a.tw {
+  width: 1.9375rem;
+  height: 1.875rem;
+  background-image: url('../images/twitter.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container .wrap section article.top {
+  background: url("../images/bg1.png") center top;
+  background-repeat: no-repeat;
+  height: 50rem;
+  overflow: hidden;
+}
+.container .wrap section article.top .tit {
+  width: 55.4375rem;
+  height: 9.375rem;
+  background-image: url("../images/tit1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 19.1875rem;
+}
+.container .wrap section article.top .cm {
+  width: 10.25rem;
+  height: 2rem;
+  background-image: url("../images/coming-soon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4.5rem;
+}
+.container .wrap section article.top .shining {
+  width: 17.1875rem;
+  height: 5rem;
+  background-image: url("../images/shining.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  top: 31.3125rem;
+  right: auto;
+  bottom: auto;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 1200px) {
+  .container .wrap header {
+    width: 100%;
+    position: fixed;
+    left: 0rem;
+    top: 0rem;
+    right: auto;
+    bottom: auto;
+    margin-left: 0rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

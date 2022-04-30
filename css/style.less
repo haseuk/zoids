@@ -1,0 +1,37 @@
+@import "asset";
+@use-rem: true;
+@rem: 16;
+
+html { font-size: 16px; }
+
+.container {
+  .wrap { .fs(0); .tc; .rel;
+    header { .w(1200); .tl; .fix; .lt(50%,0); .ml(-600); .clear;
+      h1 { .wh(144,78); .contain('../images/logo.png'); .mt(17); .ib; }
+      .h-sns { .fr; .mt(37);
+        a { .ib; .vam;
+          &.cr { .wh(30,30); .contain('../images/ico-1.png'); .mr(30); }
+          &.tw { .wh(31,30); .contain('../images/twitter.png'); }
+        }
+      }
+    }
+    section {
+      article {
+        &.top { background: url("../images/bg1.png") center top; .no-repeat; .h(800); overflow: hidden;
+          .tit { .wh(887,150); .contain("../images/tit1.png"); .mh-c; .mt(307); }
+          .cm { .wh(164,32); .contain("../images/coming-soon.png"); .mh-c; .mt(72); }
+          .shining { .wh(275,80); .contain("../images/shining.png"); .abs; .lt(50%,501); transform: translateX(-50%); }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    .wrap {
+      header { .wf; .fix; .lt(0,0); .ml(0);
+      }
+    }
+  }
+}
