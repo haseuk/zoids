@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 .container .wrap {
   font-size: 0rem;
@@ -57,11 +58,17 @@ html {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.container .wrap section article {
+  overflow: hidden;
+}
+.container .wrap section article > div {
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
 .container .wrap section article.top {
   background: url("../images/bg1.png") center top;
-  background-repeat: no-repeat;
   height: 50rem;
-  overflow: hidden;
 }
 .container .wrap section article.top .tit {
   width: 55.4375rem;
@@ -69,8 +76,6 @@ html {
   background-image: url("../images/tit1.png");
   background-repeat: no-repeat;
   background-size: contain;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 19.1875rem;
 }
 .container .wrap section article.top .cm {
@@ -79,8 +84,6 @@ html {
   background-image: url("../images/coming-soon.png");
   background-repeat: no-repeat;
   background-size: contain;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 4.5rem;
 }
 .container .wrap section article.top .shining {
@@ -95,6 +98,76 @@ html {
   right: auto;
   bottom: auto;
   transform: translateX(-50%);
+}
+.container .wrap section article.battle {
+  background: url("../images/bg2.png") center top;
+  height: 55.25rem;
+}
+.container .wrap section article.battle .tit {
+  width: 58.25rem;
+  height: 3.75rem;
+  background-image: url("../images/tit2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 6.5625rem;
+}
+.container .wrap section article.battle .txt {
+  width: 29.5rem;
+  height: 4.375rem;
+  background-image: url("../images/sub-txt2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 1rem;
+}
+.container .wrap section article.battle .vid {
+  width: 53.125rem;
+  height: 30rem;
+  margin-top: 2.5rem;
+}
+.container .wrap section article.cards {
+  background-color: #000;
+  height: 58.375rem;
+}
+.container .wrap section article.cards .tit {
+  width: 23.9375rem;
+  height: 3.4375rem;
+  background-image: url("../images/tit3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 7.8125rem;
+}
+.container .wrap section article.cards .txt {
+  width: 27.375rem;
+  height: 4.625rem;
+  background-image: url("../images/sub-txt3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 1rem;
+}
+.container .wrap section article.cards .swiper {
+  transition: transform 0.4s;
+}
+.container .wrap section article.cards .swiper .swiper-slide {
+  height: 14.0625rem;
+  margin-top: 5.25rem;
+  opacity: 0.5;
+  transition: height 1s;
+}
+.container .wrap section article.cards .swiper .swiper-slide img {
+  height: 100%;
+}
+.container .wrap section article.cards .swiper .swiper-slide.swiper-slide-prev,
+.container .wrap section article.cards .swiper .swiper-slide.swiper-slide-next {
+  height: 17.5625rem;
+  margin-top: 3.8125rem;
+  opacity: 0.7;
+}
+.container .wrap section article.cards .swiper .swiper-slide.swiper-slide-active {
+  height: 23.5625rem;
+  opacity: 1;
+  z-index: 1;
+  margin-top: 0rem;
+  transition: height 1s;
 }
 @media screen and (max-width: 1200px) {
   .container .wrap header {

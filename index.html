@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <title>ZOIDS</title>
 </head>
 <body>
@@ -24,8 +25,46 @@
           <div class="cm"></div>
           <span class="shining"></span>
         </article>
+        <article class="battle">
+          <div class="tit"></div>
+          <div class="txt"></div>
+          <div class="vid">
+            <video poster="images/mv-poster.png">
+              <source src="images">
+            </video>
+          </div>
+        </article>
+        <article class="cards">
+          <div class="tit"></div>
+          <div class="txt"></div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/characters1.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/characters2.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/characters3.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/characters4.png" alt=""></div>
+              <div class="swiper-slide"><img src="images/characters5.png" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </article>
       </section>
     </div>
   </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      speed: 1000,
+      slidesPerView: 5,
+      spaceBetween: 0,
+      loop: true,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>

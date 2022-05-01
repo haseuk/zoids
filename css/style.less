@@ -2,7 +2,7 @@
 @use-rem: true;
 @rem: 16;
 
-html { font-size: 16px; }
+html { font-size: 16px; scroll-behavior: smooth; }
 
 .container {
   .wrap { .fs(0); .tc; .rel;
@@ -16,11 +16,28 @@ html { font-size: 16px; }
       }
     }
     section {
-      article {
-        &.top { background: url("../images/bg1.png") center top; .no-repeat; .h(800); overflow: hidden;
-          .tit { .wh(887,150); .contain("../images/tit1.png"); .mh-c; .mt(307); }
-          .cm { .wh(164,32); .contain("../images/coming-soon.png"); .mh-c; .mt(72); }
+      article { overflow: hidden;
+        > div { .no-repeat; .mh-c; }
+        &.top { background: url("../images/bg1.png") center top; .h(800);
+          .tit { .wh(887,150); .contain("../images/tit1.png"); .mt(307); }
+          .cm { .wh(164,32); .contain("../images/coming-soon.png"); .mt(72); }
           .shining { .wh(275,80); .contain("../images/shining.png"); .abs; .lt(50%,501); transform: translateX(-50%); }
+        }
+        &.battle { background: url("../images/bg2.png") center top; .h(884);
+          .tit { .wh(932,60); .contain("../images/tit2.png"); .mt(105); }
+          .txt { .wh(472,70); .contain("../images/sub-txt2.png"); .mt(16); }
+          .vid { .wh(850,480); .mt(40) }
+        }
+        &.cards { .bgc(#000); .h(934);
+          .tit { .wh(383,55); .contain("../images/tit3.png"); .mt(125); }
+          .txt { .wh(438,74); .contain("../images/sub-txt3.png"); .mt(16); }
+          .swiper { transition: transform 0.4s;
+            .swiper-slide { .h(225); .mt(84); opacity: 0.5;  transition: height 1s;
+              img { .hf; }
+              &.swiper-slide-prev, &.swiper-slide-next { .h(281); .mt(61); opacity: 0.7; }
+              &.swiper-slide-active { .h(377); opacity: 1; z-index: 1; .mt(0); transition: height 1s; }
+            }
+          }
         }
       }
     }
