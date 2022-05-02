@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b346fd8c-f8c3-473d-b929-4b5629777795" name="zoids" url="http://zoids.devcraft.kr">
+        <fileTransfer rootFolder="/var/www/zoids" accessType="SFTP" host="devcraft.kr" port="22" sshConfigId="78c14691-dd9a-43b4-956d-61c0dc6f855d" sshConfig="root@devcraft.kr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
