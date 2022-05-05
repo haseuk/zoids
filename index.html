@@ -40,7 +40,7 @@
             Get ready for a nonstop battle of<br class="mo"> mecha wits and instinct!
           </div>
           <div class="vid">
-            <video muted autoplay loop playsinline>
+            <video muted autoplay loop playsinline poster="images/web/mv-poster.png">
               <source src="vid/opening.mp4" type="video/mp4">
               <source src="vid/opening.mp4" type="video/webm">
             </video>
@@ -491,23 +491,30 @@
       }
     });
 
-    var swiper2 = new Swiper(".swiper2", {
-      speed: 3000,
-      slidesPerView: 'auto',
-      loop: true,
-      autoplay: {
-        delay: 0,
-        autoplayDisableOnInteraction:true,
-      },
-      freeMode: true,
-    });
+    let swiper2;
+    let idx;
+    function swiperTwo() {
+      swiper2 = new Swiper(".swiper2", {
+        freeMode: true,
+        speed: 3000,
+        slidesPerView: 'auto',
+        loop: true,
+        autoplay: {
+          delay: 100,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
+    }
+    swiperTwo();
 
-    $('.swiper2').mouseenter(function() {
-      swiper2.autoplay.stop();
+    let artCloses = document.querySelectorAll('.artworks .popup .close');
+    Array.prototype.forEach.call(artCloses, function(e) {
+      e.addEventListener('click', function() {
+        swiper2.destroy();
+        swiperTwo();
+      })
     });
-    $('.swiper2').mouseleave(function() {
-      swiper2.autoplay.start();
-    })
 
     // let slides = document.querySelectorAll('.swiper-slide');
     // let i = slides.length;

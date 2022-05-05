@@ -6,7 +6,7 @@
 
 
 html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
-
+img { image-rendering: auto; }
 
 @media screen and (max-width: 768px) {
   .container {
@@ -95,23 +95,23 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
                 .txt { .fs(14); .lh(22); .wf; .tl; }
                 &.list1 { .h(447);
                   .tit { .w(113); .contain('../images/web/collet.png'); .mt(0); }
-                  .vs { .wh(234,213); float:none; .contain('../images/mo/list1.png'); .abs; .lt(50%,47); .ml(-117); }
+                  .vs { .wh(234,213); float:none; .contain('../images/mo/list1.png'); .abs; .lt(50%,47); .ml(-117); .mt(0); }
                   .txt { .lt(0,267); }
                 }
                 &.list2 { .h(548);
                   .tit { .w(103); .contain('../images/web/trade.png'); .rel; .lt; .mt(50); }
-                  .vs { .wh(234,213); float:none; .contain('../images/mo/list2.png'); .lt(50%,110); .ml(-117); }
+                  .vs { .wh(234,213); float:none; .contain('../images/mo/list2.png'); .lt(50%,110); .ml(-117); .mt(0); }
                   .txt { .lt(0,330); }
                 }
                 &.list3 { .h(470);
                   .tit { .w(168); .contain('../images/web/evolution.png'); .mt(50); }
-                  .vs { .wh(290,240); float:none; .contain('../images/mo/list3.png'); .abs; .lt(50%,115); .ml(-145); }
+                  .vs { .wh(290,240); float:none; .contain('../images/mo/list3.png'); .abs; .lt(50%,115); .ml(-145); .mt(0); }
                   .txt { .lt(0,350); }
                 }
                 &.list4 { .h(480);
                   &:after { .hide; }
                   .tit { .w(213); .contain('../images/web/play.png'); .rel; .lt; .mh-c; .mt(50); }
-                  .vs { .wh(234,219); float:none; .contain('../images/mo/list4.png'); .lt(50%,114); .ml(-117); }
+                  .vs { .wh(234,219); float:none; .contain('../images/mo/list4.png'); .lt(50%,114); .ml(-117); .mt(0); }
                   .txt { .lt(0,336); }
                 }
                 [mov='in'] { animation: bubblemove 2.5s infinite linear; }
@@ -185,9 +185,8 @@ html { font-family: Pretendard, sans-serif; scroll-behavior: smooth; }
             .sub-tit { .fs(15); .lh(28); }
             .tit { .wh(101,49); .contain('../images/mo/tit7.png'); .mt(24); .mb(48); }
             ul { .mt(24); .wf; .pl(30); .-box;
-              li { .m(0,25,24,0);
-                &:nth-child(odd) img { .w(141); }
-                &:nth-child(even) img { .w(136); }
+              li { .w(140); .m(0,25,24,0);
+                img { .wf; }
               }
             }
           }

@@ -3,6 +3,9 @@ html {
   font-family: Pretendard, sans-serif;
   scroll-behavior: smooth;
 }
+img {
+  image-rendering: auto;
+}
 @media screen and (max-width: 768px) {
   .container .mo {
     display: inline-block;
@@ -448,6 +451,7 @@ html {
     right: auto;
     bottom: auto;
     margin-left: -32.5vw;
+    margin-top: 0vw;
   }
   .container .wrap section article.art5 ul li.list1 .txt {
     left: 0vw;
@@ -482,6 +486,7 @@ html {
     right: auto;
     bottom: auto;
     margin-left: -32.5vw;
+    margin-top: 0vw;
   }
   .container .wrap section article.art5 ul li.list2 .txt {
     left: 0vw;
@@ -512,6 +517,7 @@ html {
     right: auto;
     bottom: auto;
     margin-left: -40.27777778vw;
+    margin-top: 0vw;
   }
   .container .wrap section article.art5 ul li.list3 .txt {
     left: 0vw;
@@ -551,6 +557,7 @@ html {
     right: auto;
     bottom: auto;
     margin-left: -32.5vw;
+    margin-top: 0vw;
   }
   .container .wrap section article.art5 ul li.list4 .txt {
     left: 0vw;
@@ -812,16 +819,14 @@ html {
     box-sizing: border-box;
   }
   .container .wrap section article.developer ul li {
+    width: 38.88888889vw;
     margin-top: 0vw;
     margin-right: 6.94444444vw;
     margin-bottom: 6.66666667vw;
     margin-left: 0vw;
   }
-  .container .wrap section article.developer ul li:nth-child(odd) img {
-    width: 39.16666667vw;
-  }
-  .container .wrap section article.developer ul li:nth-child(even) img {
-    width: 37.77777778vw;
+  .container .wrap section article.developer ul li img {
+    width: 100%;
   }
   .container .wrap footer {
     height: 87.5vw;
