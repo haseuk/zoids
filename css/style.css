@@ -14,7 +14,6 @@ html {
   font-size: 0rem;
   text-align: center;
   position: relative;
-  min-width: 81.25rem;
 }
 .container .wrap.down header,
 .container .wrap.up header {
@@ -54,6 +53,12 @@ html {
   background-size: contain;
   margin-top: 1rem;
   display: inline-block;
+}
+.container .wrap header .h-inner h1 .go-top {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 .container .wrap header .h-inner .h-sns {
   float: right;
@@ -96,18 +101,23 @@ html {
 .container .wrap section article.top {
   background: url("../images/web/bg1.png") center top;
   background-size: cover;
-  height: 50rem;
+  min-height: 50rem;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
 .container .wrap section article.top video {
-  width: 100vw;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   position: absolute;
   left: 50%;
-  top: -0.3125rem;
+  top: 0rem;
   right: auto;
   bottom: auto;
   transform: translateX(-50%);
+  background-size: cover;
 }
 .container .wrap section article.top .tit {
   width: 50.25rem;
@@ -171,6 +181,18 @@ html {
   right: auto;
   top: auto;
   transform: translateX(-50%);
+  display: inline-block;
+  height: 2.5rem;
+}
+.container .wrap section article.top .sc .sc-down {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 .container .wrap section article.top .sc:after {
   content: '';
@@ -182,7 +204,7 @@ html {
   background-size: contain;
   position: absolute;
   left: 50%;
-  bottom: -1.8125rem;
+  bottom: -0.25rem;
   right: auto;
   top: auto;
   transform: translateX(-50%);
@@ -226,15 +248,25 @@ html {
 }
 .container .wrap section article.battle .pop-vid {
   position: fixed;
+  left: 0rem;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+}
+.container .wrap section article.battle .pop-vid video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
   left: 50%;
   top: 0rem;
   right: auto;
   bottom: auto;
   transform: translateX(-50%);
-  width: 100vw;
-}
-.container .wrap section article.battle .pop-vid video {
-  height: 100%;
+  background-size: cover;
 }
 .container .wrap section article.battle .pop-vid .close {
   width: 100%;
@@ -263,7 +295,7 @@ html {
   margin-top: 1rem;
 }
 .container .wrap section article.cards .swiper {
-  width: 81.25rem;
+  width: 80rem;
   height: 31.625rem;
   margin-top: 4.5625rem;
   padding-top: 0rem;
@@ -307,7 +339,7 @@ html {
   height: 23.25rem;
   position: absolute;
   left: 0rem;
-  top: 0rem;
+  top: 1.875rem;
   right: auto;
   bottom: auto;
   display: inline-block;
@@ -330,14 +362,13 @@ html {
   display: block;
   width: 6.25rem;
   height: 12.5rem;
-  box-shadow: 0 0 25px 12px #00FFFF;
+  box-shadow: 5px 0 25px 12px #00FFFF;
   position: absolute;
-  left: 50%;
+  left: 0.125rem;
   top: 50%;
   right: auto;
   bottom: auto;
-  margin-left: 1.5rem;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
   z-index: -1;
   opacity: 0;
   transition: width 1s, height 1s, opacity 2s;
@@ -414,16 +445,16 @@ html {
 .container .wrap section article.cards .swiper .swiper-slide.swiper-slide-active .char {
   opacity: 1;
   z-index: 2;
-  padding-top: 1.4375rem;
+  padding-top: 1.5625rem;
   padding-right: 0rem;
-  padding-bottom: 1.4375rem;
+  padding-bottom: 1.5625rem;
   padding-left: 0rem;
 }
 .container .wrap section article.cards .swiper .swiper-slide.swiper-slide-active .char:after {
   content: '';
   display: block;
-  width: 15.9375rem;
-  height: 22.375rem;
+  width: 15.625rem;
+  height: 22.5rem;
   opacity: 1;
 }
 .container .wrap section article.cards .swiper .swiper-slide.swiper-slide-active .nm {
@@ -440,13 +471,13 @@ html {
   display: none;
 }
 .container .wrap section article.cards .swiper .swiper-btn.swiper-button-next {
-  right: 0rem;
+  right: 1.25rem;
   background-image: url('../images/web/ico-right.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
 .container .wrap section article.cards .swiper .swiper-btn.swiper-button-prev {
-  left: 0rem;
+  left: 1.25rem;
   background-image: url('../images/web/ico-left.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -502,6 +533,9 @@ html {
   box-sizing: border-box;
   text-align: left;
   position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 .container .wrap section article.art5 ul li:after {
   content: '';
@@ -519,6 +553,7 @@ html {
 }
 .container .wrap section article.art5 ul li .tit {
   display: inline-block;
+  width: 32rem;
   height: 2.1875rem;
 }
 .container .wrap section article.art5 ul li .txt {
@@ -533,8 +568,7 @@ html {
   height: 26.9375rem;
 }
 .container .wrap section article.art5 ul li.list1 .tit {
-  width: 8.1875rem;
-  background-image: url('../images/web/collet.png');
+  background-image: url('../images/web/collect.png');
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: 6.6875rem;
@@ -559,14 +593,13 @@ html {
   height: 27.625rem;
 }
 .container .wrap section article.art5 ul li.list2 .tit {
-  width: 7.5rem;
   background-image: url('../images/web/trade.png');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  left: 38.5625rem;
+  right: 5.625rem;
   top: 6.3125rem;
-  right: auto;
+  left: auto;
   bottom: auto;
 }
 .container .wrap section article.art5 ul li.list2 .vs {
@@ -584,16 +617,15 @@ html {
 }
 .container .wrap section article.art5 ul li.list2 .txt {
   position: absolute;
-  left: 38.5625rem;
+  right: 5.625rem;
   top: 9.6875rem;
-  right: auto;
+  left: auto;
   bottom: auto;
 }
 .container .wrap section article.art5 ul li.list3 {
   height: 27.75rem;
 }
 .container .wrap section article.art5 ul li.list3 .tit {
-  width: 12.3125rem;
   background-image: url('../images/web/evolution.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -622,14 +654,13 @@ html {
   display: none;
 }
 .container .wrap section article.art5 ul li.list4 .tit {
-  width: 15.5625rem;
   background-image: url('../images/web/play.png');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  left: 38.5625rem;
+  right: 5.625rem;
   top: 8.5rem;
-  right: auto;
+  left: auto;
   bottom: auto;
 }
 .container .wrap section article.art5 ul li.list4 .vs {
@@ -647,24 +678,23 @@ html {
 }
 .container .wrap section article.art5 ul li.list4 .txt {
   position: absolute;
-  left: 38.5625rem;
+  right: 5.625rem;
   top: 11.75rem;
-  right: auto;
+  left: auto;
   bottom: auto;
 }
-.container .wrap section article.art5 ul li [mov='in'] {
-  animation: bubblemove 2.5s infinite linear;
+.container .wrap section article.art5.in ul li {
+  opacity: 1;
+  transform: translateY(0);
 }
-@keyframes bubblemove {
-  0% {
-    margin-top: 0;
-  }
-  50% {
-    margin-top: -1rem;
-  }
-  100% {
-    margin-top: 0;
-  }
+.container .wrap section article.art5.in ul li.list2 {
+  transition-delay: 0.5s;
+}
+.container .wrap section article.art5.in ul li.list3 {
+  transition-delay: 1s;
+}
+.container .wrap section article.art5.in ul li.list4 {
+  transition-delay: 1.5s;
 }
 .container .wrap section article.artworks {
   background-color: #000;
@@ -682,22 +712,31 @@ html {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 {
+.container .wrap section article.artworks .art-slide {
   height: 16.875rem;
   margin-top: 4.5rem;
+  position: relative;
+  overflow: hidden;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper {
-  transition-timing-function: linear!important;
+.container .wrap section article.artworks .art-slide .slide-inner {
+  width: 200.25rem;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide {
   width: 20.625rem;
   height: 13.8125rem;
   margin-top: 1.125rem;
   margin-right: 1.625rem;
   margin-bottom: 0rem;
   margin-left: 0rem;
+  display: inline-block;
+  vertical-align: top;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide a {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide a {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -708,7 +747,7 @@ html {
   cursor: pointer;
   display: inline-block;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide:hover {
   width: 22.8125rem !important;
   height: 15.9375rem !important;
   margin-top: 0.0625rem !important;
@@ -716,113 +755,134 @@ html {
   margin-bottom: 0rem !important;
   margin-left: -1.0625rem !important;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide1 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide1 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl1.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide1:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide1:hover {
   background-image: url('../images/web/sl1-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide2 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide2 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl2.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide2:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide2:hover {
   background-image: url('../images/web/sl2-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide3 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide3 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl3.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide3:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide3:hover {
   background-image: url('../images/web/sl3-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide4 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide4 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl4.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide4:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide4:hover {
   background-image: url('../images/web/sl4-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide5 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide5 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl5.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide5:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide5:hover {
   background-image: url('../images/web/sl5-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide6 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide6 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl6.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide6:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide6:hover {
   background-image: url('../images/web/sl6-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide7 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide7 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl7.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide7:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide7:hover {
   background-image: url('../images/web/sl7-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide8 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide8 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl8.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide8:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide8:hover {
   background-image: url('../images/web/sl8-on.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide9 {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide9 {
   width: 20.625rem;
   height: 13.8125rem;
   background-image: url('../images/web/sl9.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
-.container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide9:hover {
+.container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide9:hover {
   background-image: url('../images/web/sl9-on.png');
   background-repeat: no-repeat;
   background-size: contain;
+}
+.container .wrap section article.artworks .art-slide .before {
+  animation: slideBefore 25s linear infinite;
+}
+.container .wrap section article.artworks .art-slide .after {
+  transform: translateX(100%);
+  animation: slideAfter 25s linear infinite;
+}
+@keyframes slideBefore {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideAfter {
+  100% {
+    transform: translateX(0);
+  }
+}
+.container .wrap section article.artworks .art-slide:hover .before,
+.container .wrap section article.artworks .art-slide:hover .after {
+  animation-play-state: paused;
 }
 .container .wrap section article.artworks .popup {
   position: fixed;
@@ -941,6 +1001,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   width: 65rem;
+  text-align: left;
 }
 .container .wrap section article.developer ul li {
   display: inline-block;
@@ -971,6 +1032,12 @@ html {
   background-image: url('../images/web/logo-ft.png');
   background-repeat: no-repeat;
   background-size: contain;
+}
+.container .wrap footer .ft-inner h1 .go-top {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 .container .wrap footer .ft-inner .copy {
   font-size: 0.8125rem;
@@ -1046,7 +1113,7 @@ html {
   background-size: contain;
 }
 .container .wrap .popup {
-  position: absolute;
+  position: fixed;
   left: 0rem;
   top: 0rem;
   right: auto;
@@ -1057,7 +1124,7 @@ html {
   display: none;
 }
 .container .wrap .popup .dim {
-  position: fixed;
+  position: absolute;
   left: 0rem;
   top: 0rem;
   right: auto;
@@ -1073,10 +1140,7 @@ html {
   top: 50%;
   right: auto;
   bottom: auto;
-  margin-top: -21.75rem;
-  margin-right: 0rem;
-  margin-bottom: 0rem;
-  margin-left: -32.8125rem;
+  transform: translate(-50%, -50%);
 }
 .container .wrap .popup .pop-inner .info {
   position: absolute;
@@ -1177,14 +1241,16 @@ html {
   height: 0.25rem;
   position: absolute;
   left: 0rem;
-  top: 50%;
+  top: 0.625rem;
   right: auto;
   bottom: auto;
-  transform: translateY(-50%);
   border-radius: 50%;
   background-color: #00FFFF;
 }
 .container .wrap .popup .pop-inner .info .info-box .pop-txt ul li.s {
+  margin-top: 0.625rem;
+}
+.container .wrap .popup .pop-inner .info .info-box .pop-txt ul li.s b {
   color: #00FFFF;
 }
 .container .wrap .popup .pop-inner .info .desc {
@@ -1209,7 +1275,6 @@ html {
   text-align: left;
   color: #fff;
   font-weight: 600;
-  text-transform: uppercase;
 }
 .container .wrap .popup .pop-inner .info ::-webkit-scrollbar {
   width: 0.3125rem;
@@ -1256,21 +1321,120 @@ html {
   width: 9.9375rem;
   height: 2rem;
 }
-@media screen and (max-width: 1450px) {
-  .container .wrap section article.top video {
-    height: 100vh;
-    width: auto;
+.container .wrap .loader {
+  position: fixed;
+  z-index: 100;
+  left: 0rem;
+  top: 0rem;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.container .wrap .loader span {
+  width: 37.5rem;
+  height: 31.25rem;
+  background-image: url('../images/loading.gif');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1280px) {
+  .container .wrap header .h-inner {
+    width: 100%;
+  }
+  .container .wrap section article.cards {
+    height: auto;
+  }
+  .container .wrap section article.cards .tit {
+    margin-top: 5rem;
+  }
+  .container .wrap section article.cards .swiper {
+    width: 100%;
+    margin-top: 0rem;
+  }
+  .container .wrap section article.cards .swiper .swiper-slide {
+    transform: scale(0.8);
+  }
+  .container .wrap section article.cards .swiper .swiper-slide.swiper-slide-active {
+    margin-right: 3.4375rem;
+  }
+  .container .wrap section article.art5 ul {
+    width: 100%;
+  }
+  .container .wrap section article.art5 ul li .tit,
+  .container .wrap section article.art5 ul li .txt {
+    width: 43vw;
+  }
+  .container .wrap section article.art5 ul li.list2 .tit,
+  .container .wrap section article.art5 ul li.list4 .tit,
+  .container .wrap section article.art5 ul li.list2 .txt,
+  .container .wrap section article.art5 ul li.list4 .txt {
+    right: 2.5rem;
+  }
+  .container .wrap section article.art5 ul li:after {
+    width: 100%;
+  }
+  .container .wrap section article.developer ul {
+    width: 48.75rem;
+  }
+  .container .wrap footer .ft-inner {
+    width: 97%;
   }
 }
-@media screen and (max-width: 1200px) {
-  .container .wrap header {
-    width: 100%;
-    position: fixed;
-    left: 0rem;
-    top: 0rem;
-    right: auto;
-    bottom: auto;
-    margin-left: 0rem;
+@media screen and (max-width: 1024px) {
+  .container .wrap section article.cards .swiper {
+    padding-top: 0rem;
+    padding-right: 4.0625rem;
+    padding-bottom: 0rem;
+    padding-left: 4.0625rem;
+  }
+  .container .wrap section article.cards .swiper .swiper-slide {
+    transform: scale(0.7);
+  }
+  .container .wrap section article.cards .swiper .swiper-slide.swiper-slide-active {
+    margin-right: 2.5rem;
+  }
+  .container .wrap section article.cards .popup .pop-inner {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  .container .wrap section article.art5 ul li .tit,
+  .container .wrap section article.art5 ul li .txt {
+    width: 35vw;
+  }
+  .container .wrap section article.art5 ul li.list1 .tit {
+    margin-top: 4.1875rem;
+  }
+  .container .wrap section article.art5 ul li.list1 .txt {
+    top: 7.625rem;
+  }
+  .container .wrap section article.art5 ul li.list2 .tit {
+    top: 5.6875rem;
+  }
+  .container .wrap section article.art5 ul li.list2 .txt {
+    top: 9.0625rem;
+  }
+  .container .wrap section article.art5 ul li.list3 .tit {
+    margin-top: 5.9375rem;
+  }
+  .container .wrap section article.art5 ul li.list3 .txt {
+    top: 9.1875rem;
+  }
+  .container .wrap section article.art5 ul li.list2 .vs {
+    left: 3.125rem;
+  }
+  .container .wrap section article.art5 ul li.list4 .vs {
+    left: 0.9375rem;
+  }
+  .container .wrap section article.artworks .popup .img {
+    transform: translate(-50%, -50%) scale(0.8);
   }
 }
 /*# sourceMappingURL=style.css.map */

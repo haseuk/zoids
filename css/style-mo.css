@@ -25,10 +25,12 @@ img {
     width: 100%;
     height: 26.11111111vw;
     position: absolute;
+    z-index: 1;
   }
   .container .wrap header .h-inner {
     width: 100%;
-    height: 197.5vw;
+    height: 100vh;
+    min-height: 197.5vw;
     text-align: center;
     position: relative;
   }
@@ -40,6 +42,12 @@ img {
     background-size: contain;
     margin-top: 11.38888889vw;
     display: inline-block;
+  }
+  .container .wrap header .h-inner h1 .go-top {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
   }
   .container .wrap header .h-inner .h-sns {
     position: absolute;
@@ -78,11 +86,7 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
     width: 100vw;
-    height: 197.5vw;
-  }
-  .container .wrap section article.top video {
-    height: 100%;
-    top: 0vw;
+    min-height: 197.5vw;
   }
   .container .wrap section article.top .tit {
     width: 72.22222222vw;
@@ -129,7 +133,8 @@ img {
   .container .wrap section article.top .sc {
     font-size: 3.33333333vw;
     line-height: 4.16666667vw;
-    bottom: 13.88888889vw;
+    bottom: 2.77777778vw;
+    z-index: 2;
   }
   .container .wrap section article.top .sc:after {
     content: '';
@@ -137,6 +142,7 @@ img {
     background-image: url('../images/mo/ico-arrow-d.png');
     background-repeat: no-repeat;
     background-size: contain;
+    bottom: 0vw;
   }
   .container .wrap section article.battle {
     background-image: url("../images/mo/bg2.png");
@@ -238,6 +244,9 @@ img {
   .container .wrap section article.cards .swiper:before {
     display: none;
   }
+  .container .wrap section article.cards .swiper .swiper-slide {
+    transform: none;
+  }
   .container .wrap section article.cards .swiper .swiper-slide a {
     width: 41.66666667vw;
     height: 61.11111111vw;
@@ -255,8 +264,7 @@ img {
     display: block;
     width: 13.88888889vw;
     height: 41.66666667vw;
-    box-shadow: 0 0 3vw 2.5vw #00FFFF;
-    margin-left: -1.11111111vw;
+    box-shadow: 0.5vw 0 3vw 2.5vw #00FFFF;
   }
   .container .wrap section article.cards .swiper .swiper-slide .nm {
     width: 76.38888889vw;
@@ -432,8 +440,8 @@ img {
     height: 124.16666667vw;
   }
   .container .wrap section article.art5 ul li.list1 .tit {
-    width: 31.38888889vw;
-    background-image: url('../images/web/collet.png');
+    width: 37.5vw;
+    background-image: url('../images/web/collect.png');
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 0vw;
@@ -592,11 +600,14 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 {
+  .container .wrap section article.artworks .art-slide {
     height: 53.33333333vw;
     margin-top: 6.11111111vw;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide {
+  .container .wrap section article.artworks .art-slide .slide-inner {
+    width: 615vw;
+  }
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide {
     width: 62.77777778vw;
     height: 42.22222222vw;
     margin-top: 5vw;
@@ -604,7 +615,7 @@ img {
     margin-bottom: 0vw;
     margin-left: 0vw;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide:hover {
     width: 72.22222222vw !important;
     height: 51.66666667vw !important;
     margin-top: 0.27777778vw !important;
@@ -612,113 +623,119 @@ img {
     margin-bottom: 0vw !important;
     margin-left: -4.72222222vw !important;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide1 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide1 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl1.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide1:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide1:hover {
     background-image: url('../images/mo/sl1-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide2 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide2 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl2.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide2:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide2:hover {
     background-image: url('../images/mo/sl2-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide3 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide3 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl3.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide3:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide3:hover {
     background-image: url('../images/mo/sl3-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide4 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide4 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl4.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide4:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide4:hover {
     background-image: url('../images/mo/sl4-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide5 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide5 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl5.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide5:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide5:hover {
     background-image: url('../images/mo/sl5-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide6 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide6 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl6.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide6:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide6:hover {
     background-image: url('../images/mo/sl6-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide7 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide7 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl7.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide7:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide7:hover {
     background-image: url('../images/mo/sl7-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide8 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide8 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl8.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide8:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide8:hover {
     background-image: url('../images/mo/sl8-on.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide9 {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide9 {
     width: 62.77777778vw;
     height: 42.22222222vw;
     background-image: url('../images/mo/sl9.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .container .wrap section article.artworks .swiper2 .swiper-wrapper .swiper-slide.swiper-slide9:hover {
+  .container .wrap section article.artworks .art-slide .slide-inner .swiper-slide.swiper-slide9:hover {
     background-image: url('../images/mo/sl9-on.png');
     background-repeat: no-repeat;
     background-size: contain;
+  }
+  .container .wrap section article.artworks .art-slide .before {
+    animation: slideBefore 30s linear infinite;
+  }
+  .container .wrap section article.artworks .art-slide .after {
+    animation: slideAfter 30s linear infinite;
   }
   .container .wrap section article.artworks .popup .dim {
     opacity: 1;
@@ -851,6 +868,12 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
+  .container .wrap footer .ft-inner h1 .go-top {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
   .container .wrap footer .ft-inner .copy {
     font-size: 3.33333333vw;
     line-height: 5vw;
@@ -920,6 +943,9 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .container .wrap .popup {
+    transform: none;
+  }
   .container .wrap .popup .dim {
     background-color: #000;
     opacity: 1;
@@ -927,14 +953,6 @@ img {
   .container .wrap .popup .pop-inner {
     width: 89.44444444vw;
     height: 169.16666667vw;
-    margin: 0vw;
-    position: relative;
-    left: 0vw;
-    top: 0vw;
-    right: auto;
-    bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
   }
   .container .wrap .popup .pop-inner .info {
     width: 89.44444444vw;
@@ -1075,6 +1093,31 @@ img {
   .container .wrap .popup.stego .pop-inner .info .info-box .tit-box .pop-tit {
     width: auto;
     height: 6.38888889vw;
+  }
+  .container .wrap .loader {
+    position: fixed;
+    z-index: 100;
+    left: 0vw;
+    top: 0vw;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
+  .container .wrap .loader span {
+    width: 83.33333333vw;
+    height: 69.44444444vw;
+    background-image: url('../images/loading.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
   }
 }
 /*# sourceMappingURL=style-mo.css.map */

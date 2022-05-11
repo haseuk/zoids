@@ -12,58 +12,25 @@
   <title>ZOIDS</title>
 </head>
 <body>
-  <div class="container">
-    <div class="wrap">
-      <header>
-        <h1>ZOIDS WILD NFT ARENA</h1>
-        <div class="h-sns">
-          <a href="" class="cr"></a>
-          <a href="" class="tw"></a>
-        </div>
-      </header>
-      <section>
-        <article class="top">
-          <div class="tit"></div>
-          <div class="cm"></div>
-          <span class="shining"></span>
-        </article>
-        <article class="battle">
-          <div class="tit"></div>
-          <div class="txt"></div>
-          <div class="vid">
-            <video poster="images/web/mv-poster.png">
-              <source src="images">
-            </video>
-          </div>
-        </article>
-        <article class="cards">
-          <div class="tit"></div>
-          <div class="txt"></div>
-          <ul class="bxslider">
-            <li class="swiper-slide"><img src="images/web/characters1.png" alt=""></li>
-            <li class="swiper-slide"><img src="images/web/characters2.png" alt=""></li>
-            <li class="swiper-slide"><img src="images/web/characters3.png" alt=""></li>
-            <li class="swiper-slide"><img src="images/web/characters4.png" alt=""></li>
-            <li class="swiper-slide"><img src="images/web/characters5.png" alt=""></li>
-          </ul>
-        </article>
-      </section>
-    </div>
-  </div>
-
-  <script>
-    $(document).ready(function(){
-      $('.bxslider').bxSlider( {
-        mode: 'horizontal',// 가로 방향 수평 슬라이드
-        speed: 500,        // 이동 속도를 설정
-        pager: false,      // 현재 위치 페이징 표시 여부 설정
-        moveSlides: 1,     // 슬라이드 이동시 개수
-        slideWidth: 1300,   // 슬라이드 너비
-        minSlides: 5,      // 최소 노출 개수
-        maxSlides: 5,      // 최대 노출 개수
-        slideMargin: 5,    // 슬라이드간의 간격
-      });
-    });
-  </script>
+<style>
+  .model {position:relative;width:100%;height:230px;overflow:hidden; z-index:3}
+  .model .before, .model .after{position:absolute;top:0;left:0;height:100%}
+  .after{transform:translateX(100%)}
+  .model .before, .model .after{width:1940px;}
+  .model .before {animation:flowFirstShow 15s linear infinite}
+  .model .after {animation:flowLastShow 15s linear infinite}
+  @keyframes flowFirstShow{100%{transform:translateX(-100%)}}
+  @keyframes flowLastShow{100%{transform:translateX(0)}}
+  .model:hover .before, .model:hover .after {animation-play-state:paused;}
+</style>
+<div class="model">
+  <div class="before"><img alt="" src="http://img2.elandmall.com/event2/2022_marketing_2/220330/logos.jpg" /></div>
+  <div class="after"><img alt="" src="http://img2.elandmall.com/event2/2022_marketing_2/220330/logos.jpg" /></div>
+</div>
+<script>
+  $('.model').mouseenter(function() {
+    console.log('d')
+  })
+</script>
 </body>
 </html>
