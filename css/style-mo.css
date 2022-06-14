@@ -830,17 +830,12 @@ img {
     margin-bottom: 13.33333333vw;
   }
   .container .wrap section article.developer ul {
-    margin-top: 6.66666667vw;
+    text-align: center;
     width: 100%;
-    padding-left: 8.33333333vw;
-    box-sizing: border-box;
   }
   .container .wrap section article.developer ul li {
-    width: 38.88888889vw;
-    margin-top: 0vw;
-    margin-right: 6.94444444vw;
-    margin-bottom: 6.66666667vw;
-    margin-left: 0vw;
+    width: 45.83333333vw;
+    display: inline-block;
   }
   .container .wrap section article.developer ul li img {
     width: 100%;

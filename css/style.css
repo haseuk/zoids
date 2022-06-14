@@ -997,19 +997,10 @@ html {
   margin: 40px auto 80px;
 }
 .container .wrap section article.developer ul {
-  margin-top: 2.9375rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 65rem;
-  text-align: left;
+  text-align: center;
 }
 .container .wrap section article.developer ul li {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 0rem;
-  margin-right: 1.875rem;
-  margin-bottom: 3rem;
-  margin-left: 1.875rem;
+  margin-top: 0.75rem;
 }
 .container .wrap footer {
   height: 11.8125rem;
